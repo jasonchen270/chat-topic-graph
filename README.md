@@ -1,14 +1,6 @@
 # chat-topic-graph
 
-Turns your Claude Code chat history into an interactive topic map, grouped by meaning.
-
-## How it works
-
-1. Reads assistant responses from `~/.claude/projects/**/*.jsonl` (strips code blocks, file paths, terminal output so topics reflect intent, not noise).
-2. Embeds each response locally with `all-MiniLM-L6-v2` (sentence-transformers).
-3. Clusters them by cosine similarity into topics (nodes), each sized by how many responses fall in it.
-4. Links topics whose embedding centroids are similar (edges).
-5. Renders an interactive force-directed graph (vis-network) with a blue theme and search.
+Turns your Claude Code chat history into an interactive topic map, grouped by meaning. It reads assistant responses from `~/.claude/projects/**/*.jsonl`, embeds them locally with `all-MiniLM-L6-v2`, clusters them into topics, and renders an interactive force-directed graph (vis-network) with search.
 
 ## Run
 
