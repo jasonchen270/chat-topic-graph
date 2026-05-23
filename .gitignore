@@ -1,0 +1,5 @@
+# regenerable + derived from private chat history, not committed
+*.npz
+graph_*.html
+graph_*.json
+__pycache__/
