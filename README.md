@@ -1,8 +1,13 @@
 # chat-topic-graph
 
-Turns your Claude Code chat history into an interactive topic map, grouped by meaning. It reads assistant responses from `~/.claude/projects/**/*.jsonl`, embeds them locally with `all-MiniLM-L6-v2`, clusters them into topics, and renders an interactive force-directed graph (vis-network) with search.
+Turns your Claude Code chat history into an interactive topic map, grouped by meaning. This Python tool reads assistant responses from `~/.claude/projects/**/*.jsonl`, embeds them locally with `all-MiniLM-L6-v2`, clusters them into topics, and renders an interactive force-directed graph (vis-network) with search.
 
-## Run
+## Prerequisites
+
+- Python 3
+- The `sentence-transformers` and `numpy` packages (`pip install sentence-transformers numpy`)
+
+## Build & run
 
 ```
 pip install sentence-transformers numpy
