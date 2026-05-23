@@ -21,8 +21,7 @@ python3 -m http.server 8731
 
 ## Config (top of build_semantic.py)
 
-- `ROLE` — `"assistant"` (Claude's output) or `"user"` (your prompts)
-- `MODEL_NAME` — embedding model; similarity thresholds auto-calibrate to whatever model you pick
+- `ROLE`: `"assistant"` (Claude's output) or `"user"` (your prompts)
+- `MODEL_NAME`: embedding model; similarity thresholds auto-calibrate to whatever model you pick
 
 Embeddings are cached in `emb_<role>_<model>.npz`, so reruns skip re-embedding. The generated graph and caches are git-ignored because they are regenerable and derived from your private chat history.
-```
